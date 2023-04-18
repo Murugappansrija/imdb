@@ -1,0 +1,110 @@
+ create data base:
+              CREATE DATABASE imdb;
+             
+
+
+
+movie 1
+
+
+INSERT INTO `movie` (`id`, `movie_name`, `movie_genere`, `review`, `artist_skills`, `roles`) VALUES ('1', 'fandry', 'social satire, drama', '9', 'natural acting, realistic', 'shalini,jabya,kachrumane');
+
+insert new column
+ALTER TABLE `movie` ADD `review` VARCHAR(250) NOT NULL AFTER `rating`;
+
+movie-2
+
+INSERT INTO `movie` (`id`, `movie_name`, `movie_genere`, `rating`, `review`, `artist_skills`, `roles`) VALUES ('2', 'Iratta', 'drama,thriller', '7.7', 'Iratta is just brilliant and outstanding movie with it has every right in the realistic and raw making where the movie begins with good note on Murder of ASP Vinod ( Joju George ) who is twin brother of DYSP pramod where both twin brothers won\'t get each other due to childhood trauma and who killed vinod and how vinod was so rude ,', 'realistic', 'Joju George in a dual role as DySP Pramod and ASI Vinod\r\nAnjali as Malini\r\nManoj K. U. as ASI John\r\nAbhiram Radhakrishnan as CPO Bineesh\r\nArya Salim as SP Savitha Sathyan\r\nSrikant Murali as DySP Satheesh Chandran\r\nSrindaa as Minister Geetha Rajendran\r\nMeenakshi Dinesh as Swetha\r\nShebin Benson as Bobby\r\nJames Eliya as Dr. James');
+
+
+movie-3
+INSERT INTO `movie` (`id`, `movie_name`, `movie_genere`, `rating`, `review`, `artist_skills`, `roles`) VALUES ('3', 'Ayodhi', 'drama,thriller', '8.2', 'A brilliant story supported by an outstanding cast. Talks on how humanity and love prevails over all other social evils like caste, racism and religion. Heart touching performances especially by the north indian family. The movie moves in a slow pace but keeps the audience connected till the end. Although predictable at moments, the feeling/ impact that it leaves at the end is simply indescribable. There are certain scenes that are sure to create goosebumps and a lasting impact. The music and bgm are a big plus, kudos to the music director. A must watch film in recent times, will surely leave you in tears at the end.', 'realistic, natural ', 'Sasikumar as Abdul Malik\r\nPreethi Asrani as Shivani\r\nYashpal Sharma as Balram\r\nPugazh as Pandi\r\nChetan as the Terminal Manager\r\nPondy Ravi as a Cargo Manager\r\nBose Venkat as Chithirai Pandian\r\nKalloori Vinoth as Durai\r\nThaman Kumar as a Cab Driver\r\nAnju Asrani as Janaki\r\nSai Ramani as a Paramedic\r\nMaster Advaith Vinod as Sonu');
+
+
+movie4
+ 
+INSERT INTO `movie` (`id`, `movie_name`, `movie_genere`, `rating`, `review`, `artist_skills`, `roles`) VALUES ('4', 'Sarpatta Parambara', 'action, sports-drama,', '9', 'The film has been in production for a long time. Director Pa. Ranjith initially narrated the script to Karthi, but he opted to work with the director on Madras (2014) instead. At one point, during the launch of Kabali (2016), Pa. Ranjith confirmed that Suriya would play the lead in the film, but the project was later dropped due to unknown reasons. ', 'realistic, natural, convince their roles\r\n', 'Arya as Kabilan Munirathnam\r\nDushara Vijayan as Mariyamma (Kabilan\'s wife)\r\nPasupathy as Rangan Vaathiyar (Kabilan\'s Guru)\r\nJohn Vijay as Kevin, Kabilan\'s Godfather and also his father\'s friend (Daddy)\r\nVettai Muthukumar as Thaniga, Raman\'s uncle\r\nKalaiyarasan as Vetriselvan, Rangan Vaathiyar\'s son\r\nJohn Kokken as Vembuli\r\nAnupama Kumar as Bakkiyam, Kabilan\'s mother\r\nShabeer Kallarakkal as \'Dancing\' Rose\r\nSanthosh Prathap as Raman\r\nG. M. Sundar as Duraikannu Vaathiyar, Vembuli\'s boxing coach\r\nKaali Venkat as Koni Chandran\r\nSai Tamil as Meeran\r\nSanchana Natarajan as Lakshmi, Vetriselvan\'s wife\r\nPriyadarshini Rajkumar as Missiamma, Kevin\'s wife\r\nGeetha Kailasam as Rangan Vatthiyar\'s wife\r\nPaliya Joke Thangadhurai as \'Tiger Garden\' Thangam\r\nMaran as Maanja Kannan\r\nSaravana Vel as Gauthaman, Kabilan\'s friend\r\nGajapathy as Beedi Raayappan\r\nKishore as Munirathnam, Kabilan\'s father\r\nGana Bala as uncredited role\r\nProduction');
+
+add column
+ALTER TABLE `movie` ADD `movie media` VARCHAR(250) NOT NULL AFTER `id`;
+
+
+update media link
+UPDATE `movie` SET `movie media` = 'https://www.youtube.com/watch?v=XTTAHt4VlUA' WHERE `movie`.`id` = 1;
+
+UPDATE `movie` SET `movie media` = 'https://www.youtube.com/watch?v=OIMILWxADV0' WHERE `movie`.`id` = 2;
+
+UPDATE `movie` SET `movie media` = 'https://www.youtube.com/watch?v=FxGvi8O3mxM' WHERE `movie`.`id` = 3;
+
+UPDATE `movie` SET `movie media` = 'https://www.youtube.com/watch?v=EUIhalCuqmM' WHERE `movie`.`id` = 4;
+
+
+
+output
+
+
+
+Full texts
+id	
+movie media	
+movie_name	
+movie_genere	
+rating	
+review	
+artist_skills	
+roles	
+	
+
+1
+https://www.youtube.com/watch?v=XTTAHt4VlUA
+fandry
+social satire, drama
+9
+natural acting, realistic
+shalini,jabya,kachrumane
+	
+2
+https://www.youtube.com/watch?v=OIMILWxADV0
+Iratta
+drama,thriller
+8
+Iratta is just brilliant and outstanding movie wit...
+realistic
+Joju George in a dual role as DySP Pramod and ASI ...
+	
+
+3
+https://www.youtube.com/watch?v=FxGvi8O3mxM
+Ayodhi
+drama,thriller
+8
+A brilliant story supported by an outstanding cast...
+realistic, natural 
+Sasikumar as Abdul Malik
+Preethi Asrani as Shivan...
+	
+
+4
+https://www.youtube.com/watch?v=EUIhalCuqmM
+Sarpatta Parambara
+action, sports-drama,
+9
+The film has been in production for a long time. D...
+realistic, natural, convince their roles
+Arya as Kabilan Munirathnam
+Dushara Vijayan as Ma...
+
+
+
+
+select individual column
+SELECT * FROM `movie` ORDER BY `movie`.`movie media` ASC
+
+
+
+review by multiple users
+
+INSERT INTO `review` (`user id`, `fav genere`, `movie id`, `rating`) VALUES ('1', 'drama, thriller, sci-fic ', '2', '8');
+
+INSERT INTO `review` (`user id`, `fav genere`, `movie id`, `rating`) VALUES ('2', 'horror, feelgood movies, action', '4', '9.5');
+INSERT INTO `review` (`user id`, `fav genere`, `movie id`, `rating`) VALUES ('3', 'thriller, social-satire, black-comedy', '2', '7.7'), ('4', 'romance, action, drama, fantasy', '2', '7');
